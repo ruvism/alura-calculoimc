@@ -6,6 +6,7 @@ titulo.textContent = "Aparecida Nutricionista";
 
 var pacientes = document.querySelectorAll(".paciente");
 
+//para garantir que o codigo seja aplicado para todos os pacientes nos usamos o for
 for( var i = 0; i< pacientes.length; i++){
     var paciente = pacientes[i]
     
