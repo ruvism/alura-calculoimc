@@ -6,7 +6,7 @@ titulo.textContent = "Aparecida Nutricionista";
 
 var pacientes = document.querySelectorAll(".paciente");
 
-//para garantir que o codigo seja aplicado para todos os pacientes nos usamos o for
+//para garantir que o codigo seja aplicado para todos os pacientes nos usamos o for 
 for( var i = 0; i< pacientes.length; i++){
     var paciente = pacientes[i]
     
@@ -24,15 +24,17 @@ for( var i = 0; i< pacientes.length; i++){
     var alturaEhValida = true;
     var pesoEhValido = true;
     
-    if(peso <= 0 || peso > 1000){
+    if(peso <= 0 || peso > 100){
         console.log("Peso inválido");
         tdImc.textContent = "Peso inválido!";
         pesoEhValido = false;
+        paciente.classList.add("paciente-invalido");
     }
     if(altura <= 0 || altura >= 3){
         console.log("Altura inválida");
         tdImc.textContent = "Altura inválida!";
         alturaEhValida = false;
+        paciente.classList.add("paciente-invalido");
     }
     if(pesoEhValido && alturaEhValida){
         var imc = peso / ( altura * altura);    
